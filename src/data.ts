@@ -1,0 +1,373 @@
+export type Product = {
+  id: number;
+  name: string;
+  slug: string;
+  category: string;
+  categorySlug: string;
+  detail: string;
+  description: string;
+  image: string;
+  images: string[];
+  lengths: string[];
+  weights: string[];
+  price: string;
+  priceNote: string;
+};
+
+export type Category = {
+  name: string;
+  slug: string;
+  image: string;
+  description: string;
+  group: string;
+};
+
+export const whatsappNumber = '2349121325113';
+export const whatsappLink = (message: string) =>
+  `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+export const categories: Category[] = [
+  {
+    name: 'Luxury Human Hair',
+    slug: 'luxury-human-hair',
+    image: 'https://images.pexels.com/photos/15071835/pexels-photo-15071835.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Premium, carefully selected human hair for the woman who values quality above all.',
+    group: 'Hair',
+  },
+  {
+    name: 'Raw Donor Hair',
+    slug: 'raw-donor-hair',
+    image: 'https://images.pexels.com/photos/35406618/pexels-photo-35406618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Unprocessed raw donor hair with intact cuticles for the most natural look and feel.',
+    group: 'Hair',
+  },
+  {
+    name: 'Bone Straight',
+    slug: 'bone-straight',
+    image: 'https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Sleek, straight, and effortlessly elegant — the definition of timeless.',
+    group: 'Hair',
+  },
+  {
+    name: 'Deep Wave',
+    slug: 'deep-wave',
+    image: '/images/products/product_2.jpeg',
+    description: 'Voluminous deep waves that hold their bounce and beauty wash after wash.',
+    group: 'Hair',
+  },
+  {
+    name: 'Body Wave',
+    slug: 'body-wave',
+    image: 'https://images.pexels.com/photos/4130535/pexels-photo-4130535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Soft, flowing waves that frame the face with effortless grace.',
+    group: 'Hair',
+  },
+  {
+    name: 'Curly Hair',
+    slug: 'curly-hair',
+    image: 'https://images.pexels.com/photos/20459107/pexels-photo-20459107.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Beautifully defined curls with natural volume and movement.',
+    group: 'Hair',
+  },
+  {
+    name: 'Luxury Wigs',
+    slug: 'luxury-wigs',
+    image: 'https://images.pexels.com/photos/13221803/pexels-photo-13221803.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Ready-to-wear and custom luxury wigs, crafted for a flawless finish.',
+    group: 'Wigs',
+  },
+  {
+    name: 'Frontal Wigs',
+    slug: 'frontal-wigs',
+    image: 'https://images.pexels.com/photos/13221797/pexels-photo-13221797.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Ear-to-ear lace frontal wigs for the most natural, seamless hairline.',
+    group: 'Wigs',
+  },
+  {
+    name: 'Closure Wigs',
+    slug: 'closure-wigs',
+    image: 'https://images.pexels.com/photos/13221802/pexels-photo-13221802.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    description: 'Beautifully crafted closure wigs for a natural, versatile look.',
+    group: 'Wigs',
+  },
+  {
+    name: 'Wig Making Tools',
+    slug: 'wig-making-tools',
+    image: '/images/products/product_3.jpeg',
+    description: 'Professional-grade tools for wig makers — needles, caps, stands, and more.',
+    group: 'Tools & Care',
+  },
+  {
+    name: 'Wig Care Products',
+    slug: 'wig-care-products',
+    image: '/images/products/product_1.jpeg',
+    description: 'Shampoos, conditioners, sprays, and serums to keep your wigs luxurious.',
+    group: 'Tools & Care',
+  },
+  {
+    name: 'Wig Accessories',
+    slug: 'wig-accessories',
+    image: '/images/products/product_4.jpeg',
+    description: 'Brushes, combs, satin bonnets, and storage to protect your investment.',
+    group: 'Tools & Care',
+  },
+];
+
+export const products: Product[] = [
+  {
+    id: 1,
+    name: 'Signature Body Wave',
+    slug: 'signature-body-wave',
+    category: 'Body Wave',
+    categorySlug: 'body-wave',
+    detail: 'Raw donor hair · 18–30 inches',
+    description: 'Our signature body wave is crafted from 100% raw donor hair with intact cuticles, offering soft, flowing waves that frame the face with effortless grace. Each bundle is carefully selected and processed to maintain its natural luster and strength.',
+    image: 'https://images.pexels.com/photos/4130535/pexels-photo-4130535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/4130535/pexels-photo-4130535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/14472217/pexels-photo-14472217.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['18"', '20"', '22"', '24"', '26"', '28"', '30"'],
+    weights: ['100g', '200g', '300g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 2,
+    name: 'The Sivia Curl Edit',
+    slug: 'the-sivia-curl-edit',
+    category: 'Luxury Wigs',
+    categorySlug: 'luxury-wigs',
+    detail: 'Glueless lace frontal · Custom fit',
+    description: 'A glueless lace frontal wig with beautifully defined curls, custom-fitted to your head measurements for a flawless, natural look. Pre-plucked hairline, bleached knots, and an adjustable band for secure, comfortable wear.',
+    image: 'https://images.pexels.com/photos/13221803/pexels-photo-13221803.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/13221803/pexels-photo-13221803.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/13221797/pexels-photo-13221797.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/13221802/pexels-photo-13221802.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['14"', '16"', '18"', '20"', '22"', '24"'],
+    weights: ['150g', '180g', '210g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 3,
+    name: 'Miracle Hair Elixir',
+    slug: 'miracle-hair-elixir',
+    category: 'Wig Care Products',
+    categorySlug: 'wig-care-products',
+    detail: '14-in-1 moisture & shine treatment',
+    description: 'Our signature 14-in-1 miracle elixir delivers deep moisture, brilliant shine, frizz control, and heat protection in one luxurious formula. Suitable for both natural hair and luxury wigs.',
+    image: '/images/products/product_1.jpeg',
+    images: ['/images/products/product_1.jpeg', '/images/products/product_4.jpeg'],
+    lengths: ['100ml', '250ml', '500ml'],
+    weights: ['Standard'],
+    price: 'Contact for price',
+    priceNote: 'Contact us for current pricing.',
+  },
+  {
+    id: 4,
+    name: 'Salon Styling Brush',
+    slug: 'salon-styling-brush',
+    category: 'Wig Making Tools',
+    categorySlug: 'wig-making-tools',
+    detail: 'Professional heat styling brush',
+    description: 'A professional-grade styling brush designed for use with luxury wigs and extensions. Heat-resistant bristles, ergonomic handle, and gentle detangling for smooth, polished results every time.',
+    image: '/images/products/product_3.jpeg',
+    images: ['/images/products/product_3.jpeg'],
+    lengths: ['Medium', 'Large'],
+    weights: ['Standard'],
+    price: 'Contact for price',
+    priceNote: 'Contact us for current pricing.',
+  },
+  {
+    id: 5,
+    name: 'Raw Donor Deep Wave',
+    slug: 'raw-donor-deep-wave',
+    category: 'Deep Wave',
+    categorySlug: 'deep-wave',
+    detail: 'Unprocessed raw hair · 20–28 inches',
+    description: 'Unprocessed raw donor deep wave hair with intact cuticles for the most natural look and feel. Voluminous, bouncy waves that hold their pattern wash after wash.',
+    image: '/images/products/product_2.jpeg',
+    images: [
+      '/images/products/product_2.jpeg',
+      'https://images.pexels.com/photos/4130535/pexels-photo-4130535.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['20"', '22"', '24"', '26"', '28"'],
+    weights: ['100g', '200g', '300g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 6,
+    name: 'Bone Straight Luxury',
+    slug: 'bone-straight-luxury',
+    category: 'Bone Straight',
+    categorySlug: 'bone-straight',
+    detail: 'Sleek and straight · 18–30 inches',
+    description: 'Sleek, straight, and effortlessly elegant. Our bone straight hair is the definition of timeless — smooth from root to tip with a natural sheen that catches every light.',
+    image: 'https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/14472217/pexels-photo-14472217.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['18"', '20"', '22"', '24"', '26"', '28"', '30"'],
+    weights: ['100g', '200g', '300g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 7,
+    name: 'Frontal Lace Wig — Blonde',
+    slug: 'frontal-lace-wig-blonde',
+    category: 'Frontal Wigs',
+    categorySlug: 'frontal-wigs',
+    detail: 'Ear-to-ear lace · 13x6 frontal',
+    description: 'A stunning ear-to-ear lace frontal wig with a 13x6 frontal area for the most natural, seamless hairline. Pre-plucked, bleached knots, and baby hairs for an undetectable finish.',
+    image: 'https://images.pexels.com/photos/20735256/pexels-photo-20735256.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/20735256/pexels-photo-20735256.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/13221803/pexels-photo-13221803.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['14"', '16"', '18"', '20"', '22"', '24"'],
+    weights: ['150g', '180g', '210g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 8,
+    name: 'Closure Wig — Natural Black',
+    slug: 'closure-wig-natural-black',
+    category: 'Closure Wigs',
+    categorySlug: 'closure-wigs',
+    detail: '4x4 closure · Custom fit',
+    description: 'A beautifully crafted closure wig with a 4x4 lace closure for a natural, versatile parting. Custom-fitted to your measurements with an adjustable band for secure wear.',
+    image: 'https://images.pexels.com/photos/13221802/pexels-photo-13221802.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/13221802/pexels-photo-13221802.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/13221796/pexels-photo-13221796.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['14"', '16"', '18"', '20"', '22"', '24"'],
+    weights: ['150g', '180g', '210g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 9,
+    name: 'Curly Volume Bundle',
+    slug: 'curly-volume-bundle',
+    category: 'Curly Hair',
+    categorySlug: 'curly-hair',
+    detail: 'Naturally defined curls · 16–24 inches',
+    description: 'Beautifully defined curls with natural volume and movement. Our curly bundles are sourced from a single donor for consistency in curl pattern and quality.',
+    image: 'https://images.pexels.com/photos/20459107/pexels-photo-20459107.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/20459107/pexels-photo-20459107.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/20459107/pexels-photo-20459107.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['16"', '18"', '20"', '22"', '24"'],
+    weights: ['100g', '200g', '300g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+  {
+    id: 10,
+    name: 'Wig Care Mousse',
+    slug: 'wig-care-mousse',
+    category: 'Wig Care Products',
+    categorySlug: 'wig-care-products',
+    detail: 'Hold & shine · Lightweight formula',
+    description: 'A lightweight styling mousse that provides flexible hold and brilliant shine without weighing down your wig. Perfect for maintaining curl definition and reducing frizz.',
+    image: '/images/products/product_4.jpeg',
+    images: ['/images/products/product_4.jpeg', '/images/products/product_1.jpeg'],
+    lengths: ['150ml', '300ml'],
+    weights: ['Standard'],
+    price: 'Contact for price',
+    priceNote: 'Contact us for current pricing.',
+  },
+  {
+    id: 11,
+    name: 'Satin Bonnet — Gold Trim',
+    slug: 'satin-bonnet-gold-trim',
+    category: 'Wig Accessories',
+    categorySlug: 'wig-accessories',
+    detail: 'Premium satin · Protects while you sleep',
+    description: 'A premium satin bonnet with elegant gold trim, designed to protect your luxury wigs and natural hair while you sleep. Reduces friction, prevents tangling, and preserves moisture.',
+    image: '/images/products/product_4.jpeg',
+    images: ['/images/products/product_4.jpeg'],
+    lengths: ['One size', 'Large'],
+    weights: ['Standard'],
+    price: 'Contact for price',
+    priceNote: 'Contact us for current pricing.',
+  },
+  {
+    id: 12,
+    name: 'Raw Donor Luxury Pack',
+    slug: 'raw-donor-luxury-pack',
+    category: 'Raw Donor Hair',
+    categorySlug: 'raw-donor-hair',
+    detail: '3-bundle pack · Raw unprocessed',
+    description: 'Our raw donor luxury pack includes three bundles of unprocessed raw donor hair from a single donor. Intact cuticles, natural luster, and unmatched longevity for the woman who demands the very best.',
+    image: 'https://images.pexels.com/photos/35406618/pexels-photo-35406618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    images: [
+      'https://images.pexels.com/photos/35406618/pexels-photo-35406618.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+      'https://images.pexels.com/photos/15071835/pexels-photo-15071835.jpeg?auto=compress&cs=tinysrgb&h=650&w=940',
+    ],
+    lengths: ['18"', '20"', '22"', '24"', '26"', '28"', '30"'],
+    weights: ['300g', '400g'],
+    price: 'Contact for price',
+    priceNote: 'Price varies by length, weight and style. Contact us for current pricing.',
+  },
+];
+
+export const services = [
+  {
+    title: 'Custom Wig Making',
+    description: 'A personalized unit designed around your desired look, fit and lifestyle.',
+    icon: 'Sparkles',
+  },
+  {
+    title: 'Wig Revamp & Restyling',
+    description: 'Bring an old favorite back to life with expert washing, restoration and styling.',
+    icon: 'Scissors',
+  },
+  {
+    title: 'Frontal & Closure Ventilation',
+    description: 'Fine, seamless ventilation for a natural hairline and luxurious finish.',
+    icon: 'Star',
+  },
+  {
+    title: 'Machine Wig Making',
+    description: 'Durable, beautifully constructed machine wigs made for effortless wear.',
+    icon: 'Check',
+  },
+];
+
+export const testimonials = [
+  { name: 'Amara E.', rating: 5, review: 'The quality of my hair was absolutely amazing. Soft, luxurious and exactly what I wanted. The Sivia team understood the assignment.' },
+  { name: 'Chioma O.', rating: 5, review: 'My custom wig fit perfectly and looked so natural. I have never felt more confident. Thank you THE SIVIA NG!' },
+  { name: 'Zainab A.', rating: 5, review: 'They brought my old wig back to life. I could not believe it was the same wig. Truly expert craftsmanship.' },
+];
+
+export const trainingAreas = [
+  'Introduction to Wig Making',
+  'Machine Wig Making',
+  'Frontal & Closure Installation Techniques',
+  'Ventilation',
+  'Wig Construction',
+  'Wig Styling',
+  'Wig Revamp',
+  'Wig Maintenance',
+];
+
+export const getCategoryBySlug = (slug: string) => categories.find((c) => c.slug === slug);
+export const getProductBySlug = (slug: string) => products.find((p) => p.slug === slug);
+export const getProductsByCategory = (slug: string) => products.filter((p) => p.categorySlug === slug);
+
+export const categoryGroups: { label: string; items: Category[] }[] = [
+  { label: 'Hair', items: categories.filter((c) => c.group === 'Hair') },
+  { label: 'Wigs', items: categories.filter((c) => c.group === 'Wigs') },
+  { label: 'Tools & Care', items: categories.filter((c) => c.group === 'Tools & Care') },
+];

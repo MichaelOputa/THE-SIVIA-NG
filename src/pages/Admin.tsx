@@ -88,7 +88,21 @@ export default function Admin() {
     setMessage('');
     try {
       const image = await uploadImage();
-      const payload = { ...form, image, images: image ? [image] : [], lengths: form.lengths, weights: form.weights };
+      const payload = {
+        name: form.name,
+        slug: form.slug,
+        category: form.category,
+        category_slug: form.categorySlug,
+        detail: form.detail,
+        description: form.description,
+        image,
+        images: image ? [image] : [],
+        lengths: form.lengths,
+        weights: form.weights,
+        price: form.price,
+        price_note: form.priceNote,
+        is_active: form.is_active,
+      };
       const query = editingId
         ? supabase.from('store_products').update(payload).eq('id', editingId)
         : supabase.from('store_products').insert(payload);
@@ -100,7 +114,8 @@ export default function Admin() {
       setMessage('Product saved.');
       await loadProducts();
     } catch (error) {
-      setMessage(error instanceof Error ? error.message : 'Unable to save product.');
+      const databaseError = error as { message?: string; details?: string; hint?: string };
+      setMessage(databaseError.message || databaseError.details || databaseError.hint || 'Unable to save product.');
     } finally {
       setBusy(false);
     }

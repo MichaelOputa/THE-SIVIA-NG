@@ -1,14 +1,16 @@
 import { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Check, Heart, MessageCircle, Minus, Plus, ShoppingBag } from 'lucide-react';
-import { getProductBySlug, products, whatsappLink } from '@/data';
+import { whatsappLink } from '@/data';
+import { useCatalog } from '@/context/CatalogContext';
 import { useCart } from '@/context/CartContext';
 import { useWishlist } from '@/context/WishlistContext';
 import ProductCard from '@/components/ProductCard';
 
 export default function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const product = slug ? getProductBySlug(slug) : undefined;
+  const { products } = useCatalog();
+  const product = slug ? products.find((item) => item.slug === slug) : undefined;
   const [selectedImage, setSelectedImage] = useState(0);
   const [length, setLength] = useState(product?.lengths[0] || '');
   const [weight, setWeight] = useState(product?.weights[0] || '');

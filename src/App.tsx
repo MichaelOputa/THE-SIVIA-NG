@@ -15,17 +15,21 @@ import About from '@/pages/About';
 import Services from '@/pages/Services';
 import Training from '@/pages/Training';
 import NotFound from '@/pages/NotFound';
+import Admin from '@/pages/Admin';
+import { CatalogProvider } from '@/context/CatalogContext';
 
 function App() {
   return (
     <BrowserRouter>
       <CartProvider>
         <WishlistProvider>
-          <ScrollToTop />
-          <div className="site-shell">
-            <Header />
-            <main>
-              <Routes>
+          <CatalogProvider>
+            <ScrollToTop />
+            <div className="site-shell">
+              <Header />
+              <main>
+                <Routes>
+                <Route path="/admin" element={<Admin />} />
                 <Route path="/" element={<Home />} />
                 <Route path="/products" element={<Products />} />
                 <Route path="/category/:slug" element={<CategoryPage />} />
@@ -36,11 +40,12 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/training" element={<Training />} />
                 <Route path="*" element={<NotFound />} />
-              </Routes>
-            </main>
-            <Footer />
-            <FloatingWhatsApp />
-          </div>
+                </Routes>
+              </main>
+              <Footer />
+              <FloatingWhatsApp />
+            </div>
+          </CatalogProvider>
         </WishlistProvider>
       </CartProvider>
     </BrowserRouter>

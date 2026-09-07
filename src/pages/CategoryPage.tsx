@@ -1,10 +1,12 @@
 import { useParams, Link } from 'react-router-dom';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import { getCategoryBySlug, getProductsByCategory, categories, whatsappLink } from '@/data';
+import { getCategoryBySlug, categories, whatsappLink } from '@/data';
+import { useCatalog } from '@/context/CatalogContext';
 import ProductCard from '@/components/ProductCard';
 
 export default function CategoryPage() {
   const { slug } = useParams<{ slug: string }>();
+  const { products } = useCatalog();
   const category = slug ? getCategoryBySlug(slug) : undefined;
 
   if (!category) {
@@ -18,7 +20,7 @@ export default function CategoryPage() {
     );
   }
 
-  const categoryProducts = getProductsByCategory(category.slug);
+  const categoryProducts = products.filter((product) => product.categorySlug === category.slug);
   const relatedCategories = categories.filter((c) => c.group === category.group && c.slug !== category.slug);
 
   return (

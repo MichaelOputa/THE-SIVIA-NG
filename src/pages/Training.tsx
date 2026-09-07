@@ -7,7 +7,7 @@ export default function Training() {
       <section className="training-section">
         <div className="training-image">
           <img
-            src="https://images.pexels.com/photos/38979627/pexels-photo-38979627.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/images/products/Hair straightener brush.jpeg"
             alt="Elegant woman with long hair"
           />
         </div>

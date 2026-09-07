@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 import { ArrowRight, Check, Sparkles, Truck } from 'lucide-react';
-import { categories, products, services, whatsappLink } from '@/data';
+import { categories, services, whatsappLink } from '@/data';
+import { useCatalog } from '@/context/CatalogContext';
 import ProductCard from '@/components/ProductCard';
 
 const iconMap: Record<string, typeof Sparkles> = { Sparkles, Scissors: Sparkles, Star: Sparkles, Check };
 
 export default function Home() {
+  const { products } = useCatalog();
   const featured = products.slice(0, 4);
   const heroCategories = categories.slice(0, 5);
 
@@ -69,7 +71,7 @@ export default function Home() {
         </div>
         <div className="intro-image">
           <img
-            src="https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/images/products/Raw Vietnamese bone straight.jpeg"
             alt="Woman with elegant hair and soft makeup"
           />
           <div className="image-caption">
@@ -143,7 +145,7 @@ export default function Home() {
       <section className="feature-split">
         <div className="feature-image">
           <img
-            src="https://images.pexels.com/photos/14472217/pexels-photo-14472217.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/images/products/Raw donor bounce.jpeg"
             alt="Woman with long flowing hair"
           />
         </div>

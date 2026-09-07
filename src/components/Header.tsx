@@ -40,15 +40,15 @@ export default function Header() {
 
   return (
     <>
-      <div className="announcement">
-        <span>Nationwide delivery across Nigeria</span>
-        <span className="announcement-dot">·</span>
-        <span>Premium hair. Timeless beauty.</span>
-        <span className="announcement-dot">·</span>
-        <span>Enquire via WhatsApp</span>
-      </div>
-
       <header className="site-header">
+        <div className="announcement">
+          <span>Nationwide delivery across Nigeria</span>
+          <span className="announcement-dot">·</span>
+          <span>Premium hair. Timeless beauty.</span>
+          <span className="announcement-dot">·</span>
+          <span>Enquire via WhatsApp</span>
+        </div>
+
         <div className="header-top">
           <button className="mobile-menu-button" onClick={() => setMobileOpen(true)} aria-label="Open menu">
             <Menu size={21} />

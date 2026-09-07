@@ -6,7 +6,7 @@ export default function About() {
     <div>
       <section className="about-hero">
         <img
-          src="https://images.pexels.com/photos/38979627/pexels-photo-38979627.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+          src="/images/products/Raw unit 30 inches pixie curls.jpeg"
           alt="Elegant woman with long hair"
         />
         <div className="about-hero-shade" />
@@ -40,7 +40,7 @@ export default function About() {
         </div>
         <div className="about-image">
           <img
-            src="https://images.pexels.com/photos/6100174/pexels-photo-6100174.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/images/products/Raw Vietnamese bone straight.jpeg"
             alt="Woman with elegant hair"
           />
         </div>

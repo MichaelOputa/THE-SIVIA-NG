@@ -45,7 +45,7 @@ export default function Services() {
       <section className="feature-split">
         <div className="feature-image">
           <img
-            src="https://images.pexels.com/photos/13221803/pexels-photo-13221803.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"
+            src="/images/products/Raw unit 30 inches pixie curls.jpeg"
             alt="Luxury wig styling"
           />
         </div>

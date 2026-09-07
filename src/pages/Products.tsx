@@ -1,7 +1,8 @@
 import { useMemo, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { Sparkles, X } from 'lucide-react';
-import { categories, products, whatsappLink } from '@/data';
+import { categories, whatsappLink } from '@/data';
+import { useCatalog } from '@/context/CatalogContext';
 import ProductCard from '@/components/ProductCard';
 import { ArrowRight } from 'lucide-react';
 
@@ -9,6 +10,7 @@ export default function Products() {
   const [searchParams, setSearchParams] = useSearchParams();
   const query = searchParams.get('q') || '';
   const [activeCategory, setActiveCategory] = useState<string>('all');
+  const { products } = useCatalog();
 
   const filtered = useMemo(() => {
     let result = products;

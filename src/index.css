@@ -55,7 +55,7 @@ a { color: inherit; text-decoration: none; }
 
 /* Hero */
 .hero-section { height: min(770px, calc(100vh - 160px)); min-height: 560px; position: relative; background: #181512; color: #f7f4ee; display: flex; align-items: center; }
-.hero-image { position: absolute; inset: 0; background: url('/images/products/Omotola bounce piano color.jpeg') center 30% / cover; filter: saturate(.7); }
+.hero-image { position: absolute; inset: 0; background: url('/images/products/hero.jpeg') center 24% / cover; filter: saturate(.9); }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,11,10,.88) 0%, rgba(12,11,10,.56) 43%, rgba(12,11,10,.14) 100%), linear-gradient(0deg, rgba(12,11,10,.72), transparent 38%); }
 .hero-content { position: relative; z-index: 1; width: min(540px, 80vw); margin-left: 12vw; padding-top: 22px; animation: rise .9s ease both; }
 .eyebrow { text-transform: uppercase; letter-spacing: .2em; color: #aa7c38; font-size: 9px; font-weight: 600; margin: 0 0 21px; }
@@ -129,7 +129,7 @@ h1 em, h2 em { font-style: italic; color: #cca568; }
 .product-category { margin: 0 0 6px; color: #ac7e3a; text-transform: uppercase; letter-spacing: .17em; font-size: 8px; }
 .product-info h3 { margin: 0; font-family: 'Playfair Display'; font-weight: 400; font-size: 18px; }
 .product-detail { color: #81786d; margin: 6px 0 0; font-size: 10px; }
-.product-add { display: flex; justify-content: space-between; align-items: center; padding: 0; background: none; border-top: 1px solid #d8d0c2; padding-top: 11px; color: #7d7466; font-size: 10px; text-align: left; }
+.product-add { display: flex; justify-content: space-between; align-items: center; padding: 0; background: none; border-top: 1px solid #d8d0c2; padding-top: 11px; color: #000; font-size: 10px; font-weight: 700; text-align: left; }
 .add-circle { display: grid; place-items: center; border-radius: 50%; width: 27px; height: 27px; color: #1c1a17; border: 1px solid #b99a67; }
 .shop-note { border-top: 1px solid #d8d0c2; margin-top: 49px; padding-top: 17px; display: flex; justify-content: space-between; color: #81786d; font-size: 10px; flex-wrap: wrap; gap: 16px; }
 .shop-note span { display: flex; align-items: center; gap: 9px; }
@@ -214,7 +214,7 @@ h1 em, h2 em { font-style: italic; color: #cca568; }
 .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .product-detail-info h1 { font-size: clamp(32px, 4vw, 48px); margin-bottom: 12px; }
 .product-detail-text { color: #81786d; font-size: 13px; margin: 0 0 20px; }
-.detail-price { font-family: 'Playfair Display'; font-size: 22px; color: #1c1a17; margin-bottom: 8px; }
+.detail-price { font-family: 'Playfair Display'; font-size: 22px; color: #000; font-weight: 700; margin-bottom: 8px; }
 .price-note { color: #aa7c38; font-size: 11px; line-height: 1.6; margin: 0 0 28px; }
 .product-description { color: #736d62; font-size: 13px; line-height: 1.85; margin: 0 0 32px; max-width: 440px; }
 .detail-options { display: flex; flex-direction: column; gap: 24px; margin-bottom: 32px; }
@@ -249,7 +249,7 @@ h1 em, h2 em { font-style: italic; color: #cca568; }
 .cart-item-info h3:hover { color: #b9893c; }
 .cart-item-category { color: #ac7e3a; text-transform: uppercase; letter-spacing: .15em; font-size: 8px; margin: 0 0 8px; }
 .cart-item-options { color: #81786d; font-size: 11px; margin: 0 0 8px; }
-.cart-item-price { color: #1c1a17; font-size: 12px; font-family: 'Playfair Display'; margin: 0; }
+.cart-item-price { color: #000; font-size: 12px; font-family: 'Playfair Display'; font-weight: 700; margin: 0; }
 .cart-item-controls { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
 .cart-remove { background: none; color: #c2a8a0; padding: 4px; transition: color .15s; }
 .cart-remove:hover { color: #a76d5d; }
@@ -431,7 +431,7 @@ h1 em, h2 em { font-style: italic; color: #cca568; }
   .announcement { font-size: 7px; gap: 7px; white-space: nowrap; overflow: hidden; }
   .announcement span:nth-child(n+4) { display: none; }
   .hero-section { height: 580px; }
-  .hero-image { background-position: 58% center; }
+  .hero-image { background-position: center center; }
   .hero-content { width: 85vw; margin-left: 7vw; align-self: flex-start; padding-top: 80px; }
   .hero-copy { font-size: 12px; }
   .hero-buttons { flex-direction: column; align-items: flex-start; gap: 20px; }
